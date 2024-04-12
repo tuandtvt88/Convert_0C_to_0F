@@ -2,12 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>chuyển đổi nhiệt độ</title>
+    <style>
+        button {
+            background: yellow;
+
+        }
+    </style>
 </head>
 <body>
+<h2>Chương trình chuyển đổi nhiệt độ từ độ C sang độ F</h2>
+<input type="number" placeholder="Độ C" id="c">
+<button onclick="convert()">Chuyển đổi</button>
+<p id="kq"></p>
 <script>
-    let c = Number(prompt("Nhập giá trị độ C vào: "));
-    document.write('Giá trị chuyển đổi từ độ C sang độ F là: '+(((c*9)/5)+32));
+    function convert(){
+        let doC = +document.getElementById("c").value;
+        let doF = (9*doC/5)+32;
+        document.getElementById("kq").innerHTML = "Độ F là: "+doF;
+    }
 </script>
 </body>
 </html>
